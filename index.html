@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview Card</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding-top: 2rem;
+            background-color: hsl(30, 38%, 92%);
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        main{
+            width: 50%;
+            background-color: hsl(0, 0%, 100%);
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            border-radius: 10px 10px 10px 10px;
+            
+        }
+
+        img{
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .desktop{
+            display: none;
+        }
+
+        h1{
+            margin: 0;
+            color: hsl(212, 21%, 14%);
+        }
+
+        p{
+            color: hsl(228, 12%, 48%);
+        }
+
+        .space{
+            letter-spacing: 5px;
+            margin-top: 0;
+        }
+
+        .price{
+            color: hsl(158, 36%, 37%);
+            font-weight: 900;
+            font-size: 1.5rem;
+        }
+
+        button{
+            background-color: hsl(158, 36%, 37%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            padding: 1em;
+            font-weight: 700;
+        }
+
+        .container{
+            padding: 1.5rem;
+        }
+
+        @media (min-width: 480px) 
+        {
+            main{
+                flex-direction: row;
+            }
+            
+            .container{
+                width: 50%;
+            }
+
+            .mobile{
+                display: none;
+            }
+
+            .desktop{
+                display: block;
+                width: 50%;
+                border-radius: 10px 0px 0px 10px;
+            }
+        }
+
+        @media screen and (min-width: 480px) and (max-width: 635px) {
+            h1{
+                font-size: 1.5rem;
+                padding-right: 5rem;
+            }
+
+            .space{
+                font-size: 0.9rem;
+                padding-right: 1rem;
+            }
+
+            p{
+                margin-right: 2rem;
+            }
+
+            button{
+                width: 60%;
+            }
+
+            main{
+                margin-top: 5rem;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            .container{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+
+            p, h1, .space{
+                margin-bottom: 0;
+            }
+
+            body{
+                padding: 7rem;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+    
+            <img src="images/image-product-mobile.jpg" alt="perfume" class="mobile">
+           <img src="images/image-product-desktop.jpg" alt="perfume" class="desktop">
+        <div class="container">
+            <p class="space">PERFUME</p>
+            <h1>Gabrielle Essence Eau De Parfum</h1>
+            <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+            Perfumer-Creator for the House of CHANEL.</p>
+            <p class="price">$149.99</p>
+            <button>Order Now</button>
+        </div>
+    </main>
+</body>
+</html>
